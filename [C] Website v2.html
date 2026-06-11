@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cedarline Bookkeeping | Remote Bookkeeper in Eugene, OR</title>
+<meta name="description" content="Remote bookkeeping for small businesses and freelancers in Eugene, OR and nationwide. Clean books, monthly reports, real human support. Book a free consultation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1f3d34;
+  --cedar:#3f6b54;
+  --sage:#7a9b86;
+  --moss:#5a7d68;
+  --cream:#f7f5f0;
+  --sand:#efe9dd;
+  --ink:#1d2724;
+  --slate:#4a574f;
+  --line:#e3ddd0;
+  --gold:#c8a35b;
+  --white:#ffffff;
+  --shadow:0 1px 3px rgba(31,61,52,.06),0 12px 32px rgba(31,61,52,.08);
+  --shadow-lg:0 4px 12px rgba(31,61,52,.08),0 24px 56px rgba(31,61,52,.12);
+  --radius:18px;
+  --radius-sm:12px;
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.12;letter-spacing:-.01em;color:var(--forest)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.page{display:none;animation:fade .5s ease}
+.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-weight:600;font-size:1rem;
+  padding:14px 26px;border-radius:999px;
+  cursor:pointer;border:none;transition:.25s;white-space:nowrap;
+}
+.btn-primary{background:var(--forest);color:var(--cream);box-shadow:0 8px 22px rgba(31,61,52,.22)}
+.btn-primary:hover{background:var(--cedar);transform:translateY(-2px);box-shadow:0 12px 30px rgba(31,61,52,.3)}
+.btn-ghost{background:transparent;color:var(--forest);border:1.5px solid var(--cedar)}
+.btn-ghost:hover{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.btn-gold{background:var(--gold);color:#3a2c0c}
+.btn-gold:hover{filter:brightness(1.06);transform:translateY(-2px)}
+.btn .arrow{transition:transform .25s}
+.btn:hover .arrow{transform:translateX(4px)}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(247,245,240,.85);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Fraunces';font-weight:600;font-size:1.32rem;color:var(--forest);cursor:pointer}
+.logo .mark{
+  width:38px;height:38px;border-radius:10px;
+  background:linear-gradient(135deg,var(--cedar),var(--forest));
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.logo .mark svg{width:21px;height:21px}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{
+  font-size:.96rem;font-weight:500;color:var(--slate);
+  padding:9px 15px;border-radius:9px;transition:.2s;cursor:pointer;
+}
+.nav-links a:hover{color:var(--forest);background:var(--sand)}
+.nav-links a.current{color:var(--forest);font-weight:600}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{width:24px;height:2px;background:var(--forest);border-radius:2px;transition:.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- Sections ---------- */
+section{padding:84px 0}
+.eyebrow{
+  display:inline-block;font-family:'Inter';font-weight:600;
+  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cedar);margin-bottom:16px;
+}
+.lead{font-size:1.12rem;color:var(--slate);max-width:60ch}
+.section-head{max-width:680px;margin:0 auto 54px;text-align:center}
+.section-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:14px}
+.section-head p{color:var(--slate);font-size:1.08rem}
+
+/* ---------- Hero ---------- */
+.hero{
+  padding:96px 0 88px;
+  background:
+    radial-gradient(1100px 480px at 78% -8%,rgba(122,155,134,.26),transparent),
+    linear-gradient(180deg,var(--sand),var(--cream));
+  position:relative;overflow:hidden;
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,5.2vw,3.9rem);margin-bottom:22px}
+.hero h1 .accent{color:var(--cedar);font-style:italic}
+.hero p{font-size:1.18rem;color:var(--slate);margin-bottom:32px;max-width:52ch}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.hero-note{display:flex;align-items:center;gap:9px;color:var(--moss);font-size:.93rem;font-weight:500}
+.hero-note svg{width:18px;height:18px;flex:0 0 auto}
+.hero-visual{position:relative}
+.hero-visual img{border-radius:24px;box-shadow:var(--shadow-lg);object-fit:cover;width:100%;height:520px}
+.float-card{
+  position:absolute;background:var(--white);border-radius:16px;
+  padding:16px 20px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:13px;
+}
+.float-card .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto}
+.float-card small{display:block;color:var(--slate);font-size:.74rem;font-weight:500}
+.float-card strong{font-size:1.02rem;color:var(--forest);font-family:'Fraunces'}
+.fc-1{top:30px;left:-26px}
+.fc-2{bottom:34px;right:-22px}
+
+/* ---------- Trust strip ---------- */
+.trust-strip{background:var(--forest);color:var(--cream);padding:30px 0}
+.trust-strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:11px;font-size:.98rem;font-weight:500;color:#dce8df}
+.trust-item svg{width:22px;height:22px;color:var(--sage);flex:0 0 auto}
+
+/* ---------- Benefit cards ---------- */
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px 30px;transition:.3s;
+}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent}
+.card .ic-lg{
+  width:54px;height:54px;border-radius:14px;display:grid;place-items:center;margin-bottom:20px;
+  background:var(--sand);color:var(--cedar);
+}
+.card .ic-lg svg{width:26px;height:26px}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card p{color:var(--slate);font-size:.98rem}
+
+/* ---------- Services preview ---------- */
+.services-band{background:var(--sand)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{
+  background:var(--white);border-radius:var(--radius-sm);padding:26px 24px;
+  border:1px solid var(--line);transition:.25s;
+}
+.svc:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.svc .num{font-family:'Fraunces';font-size:.9rem;color:var(--gold);font-weight:600;margin-bottom:8px}
+.svc h4{font-size:1.12rem;margin-bottom:7px}
+.svc p{color:var(--slate);font-size:.92rem}
+
+/* ---------- Why / trust signals ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.why-item{text-align:left}
+.why-item .badge{
+  width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:16px;
+  background:linear-gradient(135deg,var(--cedar),var(--forest));color:var(--cream);
+}
+.why-item .badge svg{width:24px;height:24px}
+.why-item h4{font-size:1.1rem;margin-bottom:7px}
+.why-item p{color:var(--slate);font-size:.93rem}
+
+/* ---------- About preview (split) ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split img{border-radius:22px;box-shadow:var(--shadow-lg);height:440px;width:100%;object-fit:cover}
+.split h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:18px}
+.split p{color:var(--slate);margin-bottom:16px;font-size:1.04rem}
+
+/* ---------- CTA band ---------- */
+.cta-band{
+  background:linear-gradient(135deg,var(--forest),var(--cedar));
+  color:var(--cream);border-radius:28px;padding:60px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-band::before{
+  content:"";position:absolute;width:400px;height:400px;border-radius:50%;
+  background:rgba(200,163,91,.14);top:-160px;right:-120px;
+}
+.cta-band h2{color:var(--cream);font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:16px;position:relative}
+.cta-band p{color:#dce8df;font-size:1.1rem;max-width:54ch;margin:0 auto 30px;position:relative}
+.cta-band .btn{position:relative}
+
+/* ---------- Page hero (inner pages) ---------- */
+.page-hero{
+  padding:70px 0 60px;text-align:center;
+  background:linear-gradient(180deg,var(--sand),var(--cream));
+}
+.page-hero h1{font-size:clamp(2.2rem,4.6vw,3.2rem);margin-bottom:16px}
+.page-hero p{color:var(--slate);font-size:1.14rem;max-width:62ch;margin:0 auto}
+
+/* ---------- Steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:step}
+.step{position:relative;padding:32px 28px;background:var(--white);border-radius:var(--radius);border:1px solid var(--line)}
+.step .n{
+  width:46px;height:46px;border-radius:12px;background:var(--forest);color:var(--cream);
+  font-family:'Fraunces';font-size:1.25rem;font-weight:600;display:grid;place-items:center;margin-bottom:18px;
+}
+.step h4{font-size:1.22rem;margin-bottom:9px}
+.step p{color:var(--slate);font-size:.97rem}
+
+/* ---------- Service detail cards ---------- */
+.svc-detail{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.svc-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px 32px;transition:.3s;
+}
+.svc-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:transparent}
+.svc-card .top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.svc-card .ic{width:48px;height:48px;border-radius:12px;background:var(--sand);color:var(--cedar);display:grid;place-items:center;flex:0 0 auto}
+.svc-card .ic svg{width:24px;height:24px}
+.svc-card h3{font-size:1.32rem}
+.svc-card .tagline{color:var(--cedar);font-weight:600;font-size:.95rem;margin-bottom:10px}
+.svc-card p{color:var(--slate);font-size:.97rem;margin-bottom:14px}
+.svc-card ul{list-style:none;display:grid;gap:8px;margin-bottom:14px}
+.svc-card li{display:flex;align-items:flex-start;gap:9px;font-size:.93rem;color:var(--slate)}
+.svc-card li svg{width:17px;height:17px;color:var(--moss);flex:0 0 auto;margin-top:4px}
+.svc-card .best{font-size:.86rem;color:var(--moss);font-style:italic;border-top:1px solid var(--line);padding-top:12px}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:780px;margin:0 auto;display:grid;gap:14px}
+.faq-item{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  padding:22px 26px;font-size:1.06rem;font-weight:600;color:var(--forest);
+  font-family:'Inter';display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.faq-q .pm{font-size:1.5rem;color:var(--cedar);transition:.3s;flex:0 0 auto;line-height:1}
+.faq-item.open .pm{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 26px}
+.faq-item.open .faq-a{max-height:260px;padding-bottom:22px}
+.faq-a p{color:var(--slate);font-size:.98rem}
+
+/* ---------- Resources ---------- */
+.filter-bar{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:42px}
+.filter-bar button{
+  background:var(--white);border:1.5px solid var(--line);color:var(--slate);
+  padding:9px 20px;border-radius:999px;font-size:.92rem;font-weight:500;cursor:pointer;transition:.2s;
+}
+.filter-bar button:hover{border-color:var(--cedar);color:var(--forest)}
+.filter-bar button.active{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.res-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.3s;display:flex;flex-direction:column;
+}
+.res-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent}
+.res-card .thumb{height:180px;overflow:hidden}
+.res-card .thumb img{height:100%;width:100%;object-fit:cover;transition:.4s}
+.res-card:hover .thumb img{transform:scale(1.06)}
+.res-card .body{padding:24px;display:flex;flex-direction:column;flex:1}
+.res-card .tag{
+  display:inline-block;align-self:flex-start;font-size:.72rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--cedar);background:var(--sand);
+  padding:4px 11px;border-radius:999px;margin-bottom:13px;
+}
+.res-card h3{font-size:1.18rem;margin-bottom:9px;line-height:1.25}
+.res-card p{color:var(--slate);font-size:.93rem;margin-bottom:16px;flex:1}
+.res-card .read{color:var(--cedar);font-weight:600;font-size:.92rem;display:flex;align-items:center;gap:7px}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.form-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:38px;box-shadow:var(--shadow)}
+.field{margin-bottom:20px}
+.field label{display:block;font-weight:600;font-size:.92rem;color:var(--forest);margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;
+  font-family:'Inter';font-size:.97rem;color:var(--ink);background:var(--cream);transition:.2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--cedar);background:var(--white)}
+.field textarea{resize:vertical;min-height:120px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-info .info-block{display:flex;gap:15px;align-items:flex-start;margin-bottom:26px}
+.contact-info .ic{width:46px;height:46px;border-radius:12px;background:var(--sand);color:var(--cedar);display:grid;place-items:center;flex:0 0 auto}
+.contact-info .ic svg{width:22px;height:22px}
+.contact-info h4{font-size:1.06rem;margin-bottom:3px}
+.contact-info p{color:var(--slate);font-size:.96rem}
+.contact-info a{color:var(--cedar);font-weight:600}
+.map-embed{border-radius:var(--radius);overflow:hidden;height:230px;border:1px solid var(--line);box-shadow:var(--shadow);margin-top:8px}
+.map-embed iframe{width:100%;height:100%;border:0;filter:grayscale(.25) saturate(.9)}
+.socials{display:flex;gap:12px;margin-top:10px}
+.socials a{width:42px;height:42px;border-radius:11px;background:var(--white);border:1px solid var(--line);display:grid;place-items:center;color:var(--cedar);transition:.2s}
+.socials a:hover{background:var(--forest);color:var(--cream);border-color:var(--forest);transform:translateY(-2px)}
+.socials a svg{width:20px;height:20px}
+.form-success{display:none;background:#eaf3ec;border:1px solid var(--moss);color:var(--forest);padding:16px 18px;border-radius:10px;font-weight:500;margin-bottom:20px}
+.form-success.show{display:block}
+
+/* ---------- Footer ---------- */
+footer{background:var(--forest);color:#cdd9cf;padding:64px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:44px}
+.foot-brand .logo{color:var(--cream);margin-bottom:16px}
+.foot-brand p{font-size:.94rem;max-width:34ch;color:#b6c6ba}
+footer h5{color:var(--cream);font-family:'Fraunces';font-size:1.04rem;margin-bottom:16px;font-weight:600}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a{font-size:.93rem;color:#b6c6ba;cursor:pointer;transition:.2s}
+footer ul a:hover{color:var(--sage)}
+.foot-contact p{font-size:.93rem;color:#b6c6ba;margin-bottom:9px;display:flex;gap:9px;align-items:flex-start}
+.foot-contact svg{width:17px;height:17px;color:var(--sage);flex:0 0 auto;margin-top:3px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:.86rem;color:#9fb3a4}
+.foot-socials{display:flex;gap:11px}
+.foot-socials a{color:#b6c6ba;transition:.2s}
+.foot-socials a:hover{color:var(--sage)}
+.foot-socials svg{width:19px;height:19px}
+
+/* ---------- Mobile ---------- */
+@media(max-width:980px){
+  .hero-grid,.split,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .hero-visual{order:-1}
+  .hero-visual img{height:380px}
+  .cards-3,.svc-grid,.why-grid,.steps,.svc-detail,.res-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:760px){
+  .nav-links{
+    position:fixed;top:74px;left:0;right:0;
+    background:var(--cream);flex-direction:column;align-items:stretch;
+    gap:0;padding:12px 22px 24px;border-bottom:1px solid var(--line);
+    box-shadow:var(--shadow-lg);transform:translateY(-130%);transition:.35s;
+  }
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a{padding:14px 12px;border-radius:9px;font-size:1.04rem}
+  .hamburger{display:flex}
+  .nav-cta .btn-primary{display:none}
+  .cards-3,.svc-grid,.why-grid,.steps,.svc-detail,.res-grid,.form-row{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  section{padding:60px 0}
+  .cta-band{padding:42px 28px}
+  .float-card{display:none}
+  .trust-strip .wrap{justify-content:flex-start;gap:18px}
+}
+@media(max-width:480px){
+  .wrap{padding:0 20px}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="wrap nav">
+    <div class="logo" onclick="go('home')">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" stroke="#f7f5f0" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 7v10M8 9.5v5M16 9.5v5" stroke="#c8a35b" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>
+      Cedarline
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a class="current" data-nav="home" onclick="go('home')">Home</a></li>
+      <li><a data-nav="about" onclick="go('about')">About</a></li>
+      <li><a data-nav="services" onclick="go('services')">Services</a></li>
+      <li><a data-nav="resources" onclick="go('resources')">Resources</a></li>
+      <li><a data-nav="contact" onclick="go('contact')">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="btn btn-primary" onclick="go('contact')">Book a Free Consultation</button>
+      <button class="hamburger" id="burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HOME ================= -->
+<main id="home" class="page active">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Remote bookkeeping · Eugene, OR</span>
+        <h1>Your books, <span class="accent">handled.</span> Your business, clear.</h1>
+        <p>Cedarline Bookkeeping gives small businesses and freelancers clean records, monthly reports, and a real human who knows your numbers — entirely remote, with no confusing jargon.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="go('contact')">Book a Free Consultation <span class="arrow">→</span></button>
+          <button class="btn btn-ghost" onclick="go('services')">See Services</button>
+        </div>
+        <div class="hero-note">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#5a7d68" stroke-width="1.6"/><path d="M8 12l2.5 2.5L16 9" stroke="#5a7d68" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Free 30-minute consultation · No pressure, no commitment
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80" alt="Organized financial paperwork and a calculator on a clean desk representing tidy small-business bookkeeping">
+        <div class="float-card fc-1">
+          <span class="ic" style="background:#eaf3ec"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13h4l2 5 4-12 2 7h4" stroke="#3f6b54" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><small>Monthly reports</small><strong>Plain English</strong></div>
+        </div>
+        <div class="float-card fc-2">
+          <span class="ic" style="background:#f4ecd9"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" stroke="#c8a35b" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <div><small>Certified in</small><strong>QuickBooks Online</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <div class="trust-strip">
+    <div class="wrap">
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> QuickBooks Online Certified</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Real Human Support</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> No Jargon, Ever</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg> Eugene-based, US-wide</div>
+    </div>
+  </div>
+
+  <!-- 3 benefits -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why business owners choose us</span>
+        <h2>Bookkeeping without the headache</h2>
+        <p>You didn't start your business to wrestle with spreadsheets. Here's what changes when Cedarline handles your books.</p>
+      </div>
+      <div class="cards-3">
+        <div class="card">
+          <span class="ic-lg"><svg viewBox="0 0 24 24" fill="none"><path d="M5 3h14v18l-7-3-7 3V3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8h6M9 12h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <h3>Clean, current books</h3>
+          <p>Every transaction categorized, every account reconciled. You always know exactly where your money is going — no more guessing.</p>
+        </div>
+        <div class="card">
+          <span class="ic-lg"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Hours back every week</h3>
+          <p>Stop spending evenings on finances. Hand it off to a real bookkeeper and get back to the work that actually grows your business.</p>
+        </div>
+        <div class="card">
+          <span class="ic-lg"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13h4l2 5 4-12 2 7h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Numbers you understand</h3>
+          <p>Monthly profit & loss and balance sheets, written in plain English. Real insight into your business — not a pile of confusing data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services preview -->
+  <section class="services-band">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What we handle</span>
+        <h2>Everything your books need</h2>
+        <p>From monthly upkeep to catching up a backlog, Cedarline covers the full picture.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc"><div class="num">01</div><h4>Monthly Bookkeeping</h4><p>Transactions categorized, accounts reconciled, reports delivered — every month, like clockwork.</p></div>
+        <div class="svc"><div class="num">02</div><h4>QuickBooks Cleanup</h4><p>Behind on your books? We'll dig in and get everything current and accurate. No judgment.</p></div>
+        <div class="svc"><div class="num">03</div><h4>Reconciliation</h4><p>Your records matched to bank and card statements so every dollar is accounted for.</p></div>
+        <div class="svc"><div class="num">04</div><h4>Financial Reporting</h4><p>Monthly P&L and balance sheets in plain language you can actually use to make decisions.</p></div>
+        <div class="svc"><div class="num">05</div><h4>AR & AP</h4><p>Invoice and bill tracking with aging reports so nothing slips through the cracks.</p></div>
+        <div class="svc"><div class="num">06</div><h4>Payroll (Add-On)</h4><p>Pay your team accurately and on time — added to any monthly bookkeeping plan.</p></div>
+      </div>
+      <div style="text-align:center;margin-top:38px">
+        <button class="btn btn-ghost" onclick="go('services')">See all services in detail <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Cedarline / trust signals -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why Cedarline</span>
+        <h2>Built on trust, not buzzwords</h2>
+        <p>No clients are taken on without a real conversation first. Here's what you can count on from day one.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>QuickBooks Online Certified</h4>
+          <p>Working in the industry standard for small business — the software your accountant already trusts.</p>
+        </div>
+        <div class="why-item">
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>100% Remote &amp; Secure</h4>
+          <p>All work done through secure, cloud-based software. Location is never a barrier to clean books.</p>
+        </div>
+        <div class="why-item">
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H7l-3 3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <h4>Plain-English Reports</h4>
+          <p>Every monthly statement comes with a clear summary of what your numbers actually mean.</p>
+        </div>
+        <div class="why-item">
+          <span class="badge"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h4>One-Business-Day Replies</h4>
+          <p>Questions answered within one business day. You'll always know who's handling your books.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About preview -->
+  <section class="services-band">
+    <div class="wrap split">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Friendly bookkeeper working remotely at a laptop, ready to help small business owners">
+      <div>
+        <span class="eyebrow">About Cedarline</span>
+        <h2>The bookkeeper who actually explains things</h2>
+        <p>Running a business is hard enough without becoming an accountant too. Most owners are either stressed because their books are a mess — or stressed because they're not sure. That uncertainty is just as exhausting.</p>
+        <p>Cedarline exists to take that off your plate entirely. Based in Eugene, Oregon and serving small businesses, freelancers, and content creators across the US, every client gets clean books, readable reports, and a real person to call.</p>
+        <button class="btn btn-ghost" onclick="go('about')">Read our story <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Ready to stop stressing about your books?</h2>
+        <p>A free 30-minute consultation costs you nothing and tells you exactly what Cedarline can do for your business.</p>
+        <button class="btn btn-gold" onclick="go('contact')">Book Your Free Consultation <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= ABOUT ================= -->
+<main id="about" class="page">
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">About Cedarline Bookkeeping</span>
+      <h1>The bookkeeper who actually explains things</h1>
+      <p>Cedarline was built for small business owners who are tired of feeling confused about their own finances.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="Remote bookkeeper meeting with a small business client over video to review their finances">
+      <div>
+        <span class="eyebrow">Our story</span>
+        <h2>Clear numbers, real human support</h2>
+        <p>Running a business is hard enough without having to become an accountant too. Most small business owners feel one of two ways about their books: stressed because they know things are a mess, or stressed because they're not sure — and that uncertainty is just as exhausting.</p>
+        <p>Cedarline exists to take that off your plate entirely. We're based in Eugene, Oregon and work with small businesses, freelancers, and independent contractors across the US — 100% remotely.</p>
+        <p>Every client gets clean books, monthly reports they can actually read, and a real person to call when something doesn't make sense. No jargon. No confusion. Just clear numbers and the confidence that comes with knowing your finances are handled.</p>
+        <button class="btn btn-primary" onclick="go('contact')">Book a Free Consultation <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-band">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What makes us different</span>
+        <h2>How we work</h2>
+        <p>The things that matter most — and the things too many bookkeepers skip.</p>
+      </div>
+      <div class="cards-3">
+        <div class="card">
+          <span class="ic-lg"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <h3>QuickBooks Online certified</h3>
+          <p>The industry standard for small business bookkeeping — the same software your accountant uses at tax time.</p>
+        </div>
+        <div class="card">
+          <span class="ic-lg"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>100% remote</h3>
+          <p>All work done securely through cloud-based software. Whether you're across town or across the country, the service is the same.</p>
+        </div>
+        <div class="card">
+          <span class="ic-lg"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.5 8.5 0 11-3.7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M21 5v5h-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Replies within one business day</h3>
+          <p>Have a question about your numbers? You'll hear back fast — from the actual person handling your books.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Let's get your books handled</h2>
+        <p>Start with a free 30-minute consultation. No pressure, no commitment — just a clear next step.</p>
+        <button class="btn btn-gold" onclick="go('contact')">Book a Free Consultation <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= SERVICES ================= -->
+<main id="services" class="page">
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Our services</span>
+      <h1>Bookkeeping services built for small businesses</h1>
+      <p>Everything you need to keep your finances organized, accurate, and stress-free — handled remotely by a real human.</p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Simple, straightforward, every month</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h4>We talk</h4><p>Start with a free 30-minute consultation. We learn about your business, your current setup, and what you actually need.</p></div>
+        <div class="step"><div class="n">2</div><h4>We get to work</h4><p>We connect to your accounts, organize your transactions, and get your books clean and current using QuickBooks Online.</p></div>
+        <div class="step"><div class="n">3</div><h4>You get clear numbers</h4><p>Every month you receive a clean P&L and balance sheet in plain English. No jargon — just the numbers that matter.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service detail grid -->
+  <section class="services-band">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Full service list</span>
+        <h2>What we handle</h2>
+      </div>
+      <div class="svc-detail">
+
+        <div class="svc-card">
+          <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 3h14v18l-7-3-7 3V3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><h3>Monthly Bookkeeping</h3></div>
+          <div class="tagline">The foundation of everything.</div>
+          <p>Every month we categorize your transactions, reconcile your accounts, and deliver clean, organized books — so you always know where your money is going.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Transaction categorization</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Monthly account reconciliation</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> P&L and balance sheet</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Ongoing support via email</li>
+          </ul>
+          <div class="best">Best for: small businesses and freelancers who want consistent, reliable books year-round.</div>
+        </div>
+
+        <div class="svc-card">
+          <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.5 8.5 0 11-3.7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M21 5v5h-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>QuickBooks Online Cleanup</h3></div>
+          <div class="tagline">Behind on your books? We'll fix that.</div>
+          <p>Whether you've been doing it yourself and things got messy, or you haven't touched your books in months, we'll get everything current and accurate. No judgment — just clean books.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Full review of existing records</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Categorization and correction</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Account reconciliation</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Books ready for tax season</li>
+          </ul>
+          <div class="best">Best for: businesses that need to catch up before tax season or before bringing on a bookkeeper.</div>
+        </div>
+
+        <div class="svc-card">
+          <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Bank &amp; Card Reconciliation</h3></div>
+          <div class="tagline">Every dollar accounted for.</div>
+          <p>We match your records against your bank and credit card statements every month — catching errors, flagging duplicates, and making sure nothing slips through.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Monthly statement matching</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Error and duplicate detection</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Confidence your records match reality</li>
+          </ul>
+          <div class="best">Best for: any business that wants confidence their records match their accounts.</div>
+        </div>
+
+        <div class="svc-card">
+          <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13h4l2 5 4-12 2 7h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Financial Reporting</h3></div>
+          <div class="tagline">Know your numbers. Make better decisions.</div>
+          <p>Every month you receive a clear P&L and balance sheet — the two most important documents in your business — written in plain English so you actually understand them.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Monthly profit &amp; loss statement</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Balance sheet</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Plain-language summary of what it means</li>
+          </ul>
+          <div class="best">Best for: owners who want real insight into their finances, not just a pile of data.</div>
+        </div>
+
+        <div class="svc-card">
+          <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 10h16M9 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><h3>Accounts Receivable &amp; Payable</h3></div>
+          <div class="tagline">Stay on top of what you owe — and what you're owed.</div>
+          <p>We track your incoming invoices and outgoing bills so nothing gets missed. Late payments and missed invoices are one of the biggest cash flow problems small businesses face.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Invoice tracking and follow-up</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Bill tracking and payment reminders</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Aging reports so you know who owes you</li>
+          </ul>
+          <div class="best">Best for: businesses that invoice clients or pay contractors and vendors regularly.</div>
+        </div>
+
+        <div class="svc-card">
+          <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c0-3.3 2.7-5 6-5s6 1.7 6 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M17 9h4M19 7v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><h3>Payroll (Add-On)</h3></div>
+          <div class="tagline">Pay your people on time, every time.</div>
+          <p>Payroll is one of the most stressful parts of running a business — and one of the costliest to get wrong. Add payroll processing to any monthly plan so your team gets paid accurately and on schedule.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Accurate, on-time payroll runs</li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Added to any monthly bookkeeping plan</li>
+          </ul>
+          <div class="best">Best for: businesses with a team. Ask about payroll during your consultation.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Common questions</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you work with clients outside of Eugene? <span class="pm">+</span></button><div class="faq-a"><p>Yes — Cedarline is 100% remote and serves clients across the US. Most work is done through secure cloud-based software, so your location is never a barrier.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What accounting software do you use? <span class="pm">+</span></button><div class="faq-a"><p>We primarily work in QuickBooks Online, the industry standard for small businesses. If you're just getting started, we can help you set it up correctly from day one.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does monthly bookkeeping cost? <span class="pm">+</span></button><div class="faq-a"><p>Pricing depends on the size and complexity of your business. We offer a free 30-minute consultation to learn about your needs and provide a custom quote — no pressure.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">I'm behind on my books. Can you help? <span class="pm">+</span></button><div class="faq-a"><p>Absolutely. Catch-up bookkeeping is one of our most common services. We'll get your records current no matter how far behind you are — no judgment.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What kinds of businesses do you work with? <span class="pm">+</span></button><div class="faq-a"><p>We work with sole proprietors, LLCs, freelancers, independent contractors, content creators, and small businesses across most industries. If you need clean books, we're a good fit.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-band">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Not sure which services you need?</h2>
+        <p>That's what the free consultation is for. We'll talk through your business, figure out what makes sense, and give you a straightforward quote — no pressure, no jargon.</p>
+        <button class="btn btn-gold" onclick="go('contact')">Book a Free Consultation <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= RESOURCES ================= -->
+<main id="resources" class="page">
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Resources &amp; guides</span>
+      <h1>Plain-English bookkeeping, explained</h1>
+      <p>Practical guides for small business owners, freelancers, and content creators who want to understand their numbers — no accounting degree required.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="filter-bar" id="filterBar">
+        <button class="active" data-filter="all" onclick="filterRes(this,'all')">All</button>
+        <button data-filter="tax" onclick="filterRes(this,'tax')">Tax Prep</button>
+        <button data-filter="small" onclick="filterRes(this,'small')">Small Business</button>
+        <button data-filter="creator" onclick="filterRes(this,'creator')">Content Creators</button>
+        <button data-filter="qbo" onclick="filterRes(this,'qbo')">QuickBooks Tips</button>
+      </div>
+
+      <div class="res-grid" id="resGrid">
+        <article class="res-card" data-cat="tax">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?auto=format&fit=crop&w=600&q=80" alt="Tax documents and a calculator laid out for small business tax preparation"></div>
+          <div class="body"><span class="tag">Tax Prep</span><h3>The small business tax-season checklist</h3><p>Everything you need organized before you hand your books to an accountant — so tax season stops feeling like a fire drill.</p><span class="read">Read guide →</span></div>
+        </article>
+
+        <article class="res-card" data-cat="creator">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80" alt="Content creator filming at a desk, representing bookkeeping for creators and influencers"></div>
+          <div class="body"><span class="tag">Content Creators</span><h3>Bookkeeping for content creators: where the money hides</h3><p>Brand deals, affiliate income, platform payouts, gear write-offs — how to track creator income without losing your mind.</p><span class="read">Read guide →</span></div>
+        </article>
+
+        <article class="res-card" data-cat="qbo">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Laptop showing financial charts and reports in accounting software"></div>
+          <div class="body"><span class="tag">QuickBooks Tips</span><h3>5 QuickBooks Online mistakes that cost you at tax time</h3><p>The categorization slip-ups we see most often — and how to keep your books clean from the start.</p><span class="read">Read guide →</span></div>
+        </article>
+
+        <article class="res-card" data-cat="small">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" alt="Small business owner reviewing finances on a tablet in a workshop"></div>
+          <div class="body"><span class="tag">Small Business</span><h3>How to read your P&amp;L without an accounting degree</h3><p>A line-by-line, plain-English walkthrough of the one report that tells you whether your business is actually making money.</p><span class="read">Read guide →</span></div>
+        </article>
+
+        <article class="res-card" data-cat="small">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80" alt="Notebook and laptop on a desk for planning monthly business bookkeeping"></div>
+          <div class="body"><span class="tag">Small Business</span><h3>DIY vs. hiring a bookkeeper: when does it pay off?</h3><p>A simple way to decide whether your hours are better spent in your books — or back in your business.</p><span class="read">Read guide →</span></div>
+        </article>
+
+        <article class="res-card" data-cat="tax">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=600&q=80" alt="Receipts and financial paperwork organized for deductions and expense tracking"></div>
+          <div class="body"><span class="tag">Tax Prep</span><h3>Deductions freelancers forget every single year</h3><p>Home office, mileage, software, subscriptions — the legitimate write-offs that quietly slip through the cracks.</p><span class="read">Read guide →</span></div>
+        </article>
+
+        <article class="res-card" data-cat="creator">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Person managing money and a phone, representing tracking creator and freelance income"></div>
+          <div class="body"><span class="tag">Content Creators</span><h3>Should you form an LLC for your creator business?</h3><p>What the LLC structure actually changes for your taxes and bookkeeping — and when it's worth the paperwork.</p><span class="read">Read guide →</span></div>
+        </article>
+
+        <article class="res-card" data-cat="qbo">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Dashboard of business analytics and financial metrics on a screen"></div>
+          <div class="body"><span class="tag">QuickBooks Tips</span><h3>Setting up QuickBooks Online the right way</h3><p>The first-day setup choices that save you hours of cleanup later — chart of accounts, bank feeds, and rules.</p><span class="read">Read guide →</span></div>
+        </article>
+
+        <article class="res-card" data-cat="small">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80" alt="Calculator, charts and coffee representing small business cash flow planning"></div>
+          <div class="body"><span class="tag">Small Business</span><h3>Cash flow basics: why profit isn't the same as money in the bank</h3><p>The difference that catches new owners off guard — and how clean books keep you ahead of it.</p><span class="read">Read guide →</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-band">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Want this handled for you instead?</h2>
+        <p>Reading about bookkeeping is great. Having it done is better. Book a free consultation and take it off your plate for good.</p>
+        <button class="btn btn-gold" onclick="go('contact')">Book a Free Consultation <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= CONTACT ================= -->
+<main id="contact" class="page">
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Get in touch</span>
+      <h1>Let's talk about your books</h1>
+      <p>Start with a free 30-minute consultation. We'll learn about your business and figure out exactly what you need — no pressure, no commitment.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap contact-grid">
+      <div class="form-card">
+        <div class="form-success" id="formSuccess">Thanks! Your message has been received — we'll reply within one business day.</div>
+        <form onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="field"><label for="name">Name</label><input id="name" type="text" required placeholder="Your name"></div>
+            <div class="field"><label for="biz">Business name</label><input id="biz" type="text" placeholder="Your business"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="email">Email</label><input id="email" type="email" required placeholder="you@email.com"></div>
+            <div class="field"><label for="phone">Phone <span style="font-weight:400;color:var(--slate)">(optional)</span></label><input id="phone" type="tel" placeholder="(541) 000-0000"></div>
+          </div>
+          <div class="field">
+            <label for="hear">How did you hear about us?</label>
+            <select id="hear">
+              <option value="">Select one…</option>
+              <option>Google search</option>
+              <option>Google Business Profile</option>
+              <option>Referral from a friend</option>
+              <option>Social media</option>
+              <option>YouTube</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label for="msg">Tell us a little about your business and what you're looking for</label><textarea id="msg" placeholder="A few sentences about your business and where you're at with your books…"></textarea></div>
+          <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Send Message <span class="arrow">→</span></button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <div class="info-block">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><h4>Prefer email?</h4><p><a href="mailto:hello@cedarlinebookkeeping.com">hello@cedarlinebookkeeping.com</a></p></div>
+        </div>
+        <div class="info-block">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <div><h4>Based in</h4><p>Eugene, Oregon — serving clients across the US</p></div>
+        </div>
+        <div class="info-block">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><h4>Response time</h4><p>We respond to all inquiries within one business day.</p></div>
+        </div>
+        <div class="map-embed">
+          <iframe title="Eugene, Oregon map" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-123.18%2C44.00%2C-123.00%2C44.10&layer=mapnik&marker=44.0521%2C-123.0868"></iframe>
+        </div>
+        <h4 style="margin-top:24px;font-family:'Fraunces';color:var(--forest)">Follow along</h4>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18.34V10.4H5.67v7.94h2.67zM7 9.24a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zm11.34 9.1v-4.36c0-2.33-1.25-3.42-2.91-3.42a2.51 2.51 0 00-2.27 1.25v-1.07h-2.67v7.94h2.67v-4.4c0-1.16.22-2.28 1.65-2.28 1.42 0 1.44 1.32 1.44 2.36v4.32h2.36z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3.5" stroke="currentColor" stroke-width="1.7"/><path d="M11 9.5l4 2.5-4 2.5v-5z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h2.5V6H14c-2 0-3 1.3-3 3.2V11H9v3h2v7h3v-7h2.2l.3-3H14V9.4c0-.3.2-.4.5-.4z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo" onclick="go('home')">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" stroke="#f7f5f0" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 7v10M8 9.5v5M16 9.5v5" stroke="#c8a35b" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          Cedarline
+        </div>
+        <p>Remote bookkeeping for small businesses, freelancers, and content creators. Clean books, clear numbers, real human support.</p>
+      </div>
+      <div>
+        <h5>Quick links</h5>
+        <ul>
+          <li><a onclick="go('home')">Home</a></li>
+          <li><a onclick="go('about')">About</a></li>
+          <li><a onclick="go('services')">Services</a></li>
+          <li><a onclick="go('resources')">Resources</a></li>
+          <li><a onclick="go('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a onclick="go('services')">Monthly Bookkeeping</a></li>
+          <li><a onclick="go('services')">QuickBooks Cleanup</a></li>
+          <li><a onclick="go('services')">Reconciliation</a></li>
+          <li><a onclick="go('services')">Financial Reporting</a></li>
+          <li><a onclick="go('services')">Payroll</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <h5>Get in touch</h5>
+        <p><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> hello@cedarlinebookkeeping.com</p>
+        <p><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg> Eugene, Oregon · serving the US</p>
+        <p><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Replies within one business day</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Cedarline Bookkeeping LLC. All rights reserved.</span>
+      <div class="foot-socials">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18.34V10.4H5.67v7.94h2.67zM7 9.24a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zm11.34 9.1v-4.36c0-2.33-1.25-3.42-2.91-3.42a2.51 2.51 0 00-2.27 1.25v-1.07h-2.67v7.94h2.67v-4.4c0-1.16.22-2.28 1.65-2.28 1.42 0 1.44 1.32 1.44 2.36v4.32h2.36z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3.5" stroke="currentColor" stroke-width="1.7"/><path d="M11 9.5l4 2.5-4 2.5v-5z" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.classList.toggle('current',a.dataset.nav===id);
+  });
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('burger').classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('burger').classList.toggle('open');
+}
+function toggleFaq(btn){
+  btn.parentElement.classList.toggle('open');
+}
+function filterRes(btn,cat){
+  document.querySelectorAll('#filterBar button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#resGrid .res-card').forEach(card=>{
+    card.style.display=(cat==='all'||card.dataset.cat===cat)?'flex':'none';
+  });
+}
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('formSuccess').classList.add('show');
+  e.target.reset();
+  document.getElementById('formSuccess').scrollIntoView({behavior:'smooth',block:'center'});
+}
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
